@@ -13,7 +13,7 @@ $ git clone https://github.com/yuanshihao/DevNotes.git themes/DevNote
 **DevNotes 需要 Hexo 2.7 及以上版本** 
 
 ###启用
-修改博客根目录下的配置文件 `config.yml`，把 `theme` 的值修改为 `DevNotes`.
+修改博客根目录下的配置文件 `config.yml`，把 `theme` 的值修改为 `DevNotes`
 ###更新
 ```
 cd themes/DevNotes
