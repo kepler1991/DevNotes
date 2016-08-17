@@ -29,7 +29,7 @@ git pull origin master
 
 修改 `/themes/jacman/_config.yml` 中的配置。
 
-**DevNote** 的配置与 **Jacman** 的配置相同。
+**DevNotes** 的配置与 **Jacman** 的配置相同。
 
 通过参考 **Jacman** 的 [配置指南wiki](https://github.com/wuchong/jacman/wiki/%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97) 了解更多
 
