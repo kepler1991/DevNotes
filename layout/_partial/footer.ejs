@@ -1,0 +1,82 @@
+<div id="footer" >
+	<% if(theme.author_img){ %>
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	<% } %>
+	<% if(theme.author.intro_line1 || theme.author.intro_line2){ %>
+	<section class="info">
+		<p> <%= theme.author.intro_line1 || "" %> <br/>
+			<%= theme.author.intro_line2 || "" %></p>
+	</section>
+	 <% } %>
+	<div class="social-font" class="clearfix">
+		<% if(theme.author.weibo){ %>
+		<a href="http://weibo.com/<%= theme.author.weibo %>" target="_blank" class="icon-weibo"></a>
+		<% } %>
+		<% if(theme.author.github){ %>
+		<a href="https://github.com/<%=theme.author.github %>" target="_blank" class="icon-github"></a>
+		<% } %>
+		<% if(theme.author.stackoverflow){ %>
+		<a href="http://stackoverflow.com/users/<%=theme.author.stackoverflow %>" target="_blank" class="icon-stack-overflow"></a>
+		<% } %>
+		<% if(theme.author.zhihu){ %>
+		<a href="http://www.zhihu.com/people/<%=theme.author.zhihu %>" target="_blank" class="icon-zhihu"></a>
+		<% } %>
+		<% if(theme.author.twitter){ %>
+		<a href="https://twitter.com/<%=theme.author.twitter %>" target="_blank" class="icon-twitter"></a>
+		<% } %>
+		<% if(theme.author.facebook){ %>
+		<a href="https://www.facebook.com/<%=theme.author.facebook %>" target="_blank" class="icon-facebook"></a>
+		<% } %>
+		<% if(theme.author.linkedin){ %>
+		<a href="https://www.linkedin.com/in/<%=theme.author.linkedin %>" target="_blank" class="icon-linkedin"></a>
+		<% } %>
+		<% if(theme.author.douban){ %>
+		<a href="https://www.douban.com/people/<%=theme.author.douban %>" target="_blank" class="icon-douban"></a>
+		<% } %>
+		<% if(theme.author.google_plus){ %>
+		<a href="https://plus.google.com/<%=theme.author.google_plus %>?rel=author" target="_blank" class="icon-google_plus"></a>
+		<% } %>
+		<% if(theme.author.email){ %>
+		<a href="mailto:<%=theme.author.email %>" target="_blank" class="icon-email"></a>
+		<% } %>
+	</div>
+			<%  Array.prototype.S=String.fromCharCode(2);
+			  Array.prototype.in_array=function(e){
+    			var r=new RegExp(this.S+e+this.S);
+    			return (r.test(this.S+this.join(this.S)+this.S));
+				};
+				var cc = new Array('by','by-nc','by-nc-nd','by-nc-sa','by-nd','by-sa','zero'); %>
+		<% if (cc.in_array(theme.creative_commons) ) { %>
+				<div class="cc-license">
+          <a href="http://creativecommons.org/licenses/<%= theme.creative_commons %>/4.0" class="cc-opacity" target="_blank">
+            <img src="<%- config.root %>img/cc-<%= theme.creative_commons %>.svg" alt="Creative Commons" />
+          </a>
+        </div>
+    <% } %>
+
+		<p class="copyright">
+		Copyright © <%= new Date().getFullYear() %> <a href="http://idevnotes.com" target="_blank">idevnotes.com</a> ･ All Rights Reserved ･ Powered by <a href="http://hexo.io" target="_blank">Hexo</a>
+
+		<script type="text/javascript">
+		  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+		  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+		  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+		  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  		  _st('install','oYDvD3sF3f-oMgWPxgf6','2.0.0');
+		</script>
+
+		<script type="text/javascript">
+
+			function change(img) {
+				img.id = "img_over";					
+			}
+
+			function leave(img) {
+				img.id = "img";
+			}
+		</script>
+</div>

@@ -1,0 +1,140 @@
+<div id="main" class="<%= item.layout %>" itemscope itemprop="blogPost">
+  <% if (page.layout=='photo' && item.photos && item.photos.length){ %>
+    <%- partial('gallery') %>
+  <% } %>
+	<article itemprop="articleBody"> 
+		<%- partial('header') %>
+	<div class="article-content">
+		<% if( table&&(item.toc !== false) && theme.toc.article){ %>
+		<div id="toc" class="toc-article">
+			<strong class="toc-title"><%= __('contents') %></strong>
+		<% if(item.list_number == false) {%>
+		<%- toc(item.content,{list_number:false}) %>
+		<% }else{ %>
+			<%- toc(item.content) %>
+		<% } %>
+		</div>
+		<% } %>
+		<%- item.content %>
+	</div>
+
+<% if (theme.donate.enable) { %>
+  <!-- css -->
+  <style type="text/css">
+      .center {
+          text-align: center;
+      }
+      .hidden {
+          display: none;
+      }
+    .donate_bar a.btn_donate{
+      display: inline-block;
+      width: 82px;
+      height: 82px;
+      background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
+      _background: url("http://7xsl28.com1.z0.glb.clouddn.com/btn_reward.gif") no-repeat;
+      -webkit-transition: background 0s;
+      -moz-transition: background 0s;
+      -o-transition: background 0s;
+      -ms-transition: background 0s;
+      transition: background 0s;
+    }
+
+    .donate_bar a.btn_donate:hover{ background-position: 0px -82px;}
+    .donate_bar .donate_txt {
+      display: block;
+      color: #9d9d9d;
+      font: 14px/2 "Microsoft Yahei";
+    }
+    .bold{ font-weight: bold; }
+  </style>
+
+    <!-- Donate Module -->
+    <div id="donate_module">
+
+  <!-- btn_donate & tips -->
+  <div id="donate_board" class="donate_bar center">
+      <br/><hr/><br/>
+    <a id="btn_donate" class="btn_donate" target="_self" href="javascript:;" title="Donate 打赏"></a>
+    <span class="donate_txt">
+      <%= theme.donate.text %>
+    </span> 
+    
+  </div>
+  <!-- /btn_donate & tips -->
+
+  <!-- donate guide -->
+    
+  <div id="donate_guide" class="donate_bar center hidden">
+
+  	 <br/><hr/>
+
+     <% if(theme.donate.web) { %>
+      <div width="100%" align="center">
+         <div name="dashmain" id="dash-main-id-878ac1" class="dash-main-3 878ac1-3.99"></div>
+         <script type="text/javascript" charset="utf-8" src="http://www.dashangcloud.com/static/ds.js"></script>
+      </div>
+      <% } %>
+    <br/>
+
+    <div style="margin: 0 auto;">
+   	<table style="margin: 0 auto;">
+		<tr>
+			<td style="text-align:center">
+				<span algin=“center” style="text-algin:center">
+					<a href="<%= theme.donate.wechat %>" title="用微信扫一扫" class="fancybox" rel="article0">
+			       	 	<img src="<%= theme.donate.wechat %>" title="微信打赏" height="180px" width="auto"/>
+			        	<p><font size="2">微信打赏</font></p>
+			    	</a>
+				</span>
+			</td>
+			<td style="text-align:center">
+				&nbsp;&nbsp;&nbsp;&nbsp;
+			</td>
+			<td style="text-align:center">
+				<span algin=“center” style="text-algin:center">
+	    			<a href="<%= theme.donate.alipay %>" title="用支付宝扫一扫" class="fancybox" rel="article0">
+		            	<img src="<%= theme.donate.alipay %>" title="支付宝打赏" height="180px" width="auto"/>
+		            	<p><font size="2">支付宝打赏</font></p>
+		    		</a>
+	    		</span>
+			</td>
+		</tr>
+	</table>
+ <div/>
+ 	<br/>
+    <span class="donate_txt">
+      <%= theme.donate.text %>
+    </span>
+  </div>
+  <!-- /donate guide -->
+
+  <!-- donate script -->
+  <script type="text/javascript">
+    document.getElementById('btn_donate').onclick = function() {
+      $('#donate_board').addClass('hidden');
+      $('#donate_guide').removeClass('hidden');
+    }
+
+    function donate_on_web(){
+      $('#donate').submit();
+        }
+
+    var original_window_onload = window.onload;
+        window.onload = function () {
+            if (original_window_onload) {
+                original_window_onload();
+            }
+            document.getElementById('donate_board_wdg').className = 'hidden';
+    }
+  </script>
+	<!-- /donate script -->
+	</div>
+	<!-- /Donate Module -->
+	<% } %>
+	      
+	</article>
+  <%- partial('footer') %>
+	<%- partial('pagination') %>
+	<%- partial('comment') %>
+</div>  
