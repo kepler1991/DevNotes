@@ -2,7 +2,7 @@
 
 DevNotes 是为 [Hexo](http://hexo.io) 设计的一款清新且具有响应式的主题，拥有更丰富的特性并支持了很多的国内服务。DevNotes 基于 [Jacman](https://github.com/wuchong/jacman)，改进了诸多细节。
 
-**DevNotes 支持 Hexo 3.0 !**
+ [主题演示](http://idevnotes.com)
 
 ##安装教程
 ###安装
@@ -29,9 +29,6 @@ git pull origin master
 **DevNote** 的配置与 **Jacman** 的配置相同。
 
 通过参考 **Jacman** 的 [配置指南wiki](https://github.com/wuchong/jacman/wiki/%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97) 了解更多
-
-##网站列表
-- [idevNotes](http://idevnotes.com) - The demo site 
 
 ##协议
 [MIT](/LICENSE)
