@@ -8,7 +8,7 @@ DevNotes 是为 [Hexo](http://hexo.io) 设计的一款清新且具有响应式�
 ##安装教程
 ###安装
 ```
-$ git clone https://github.com/yuanshihao/DevNotes.git themes/DevNote
+$ git clone https://github.com/yuanshihao/DevNotes.git themes/DevNotes
 ```
 **DevNotes 需要 Hexo 2.7 及以上版本** 
 
