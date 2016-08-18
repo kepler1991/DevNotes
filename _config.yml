@@ -29,10 +29,10 @@ widgets:
 #### Image
 imglogo:
   enable: true
-  src: img/logo.jpg
+  src: img/logo.png
 favicon: img/favicon.ico  
-apple_icon: img/idev.jpg
-author_img: img/author.jpg
+apple_icon: img/idev.png
+author_img: 
 banner_img: #img/other
 
 ### Theme Color 
