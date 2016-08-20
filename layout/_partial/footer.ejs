@@ -61,22 +61,22 @@
 		Copyright © <%= new Date().getFullYear() %> <a href="http://idevnotes.com" target="_blank">idevnotes.com</a> ･ All Rights Reserved ･ Powered by <a href="http://hexo.io" target="_blank">Hexo</a>
 
 		<script type="text/javascript">
-		  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-		  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-		  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-		  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-  
-  		  _st('install','oYDvD3sF3f-oMgWPxgf6','2.0.0');
-		</script>
-
-		<script type="text/javascript">
 
 			function change(img) {
-				img.id = "img_over";					
+				if(img.id == "img") {
+					img.id = "img_over";
+				} else {
+					img.id = "img_small_over";
+				}
+									
 			}
 
 			function leave(img) {
-				img.id = "img";
+				if(img.id == "img_over") {
+					img.id = "img";
+				} else {
+					img.id = "img_small";
+				}
 			}
 		</script>
 </div>

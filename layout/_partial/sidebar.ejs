@@ -10,7 +10,7 @@
   </div>
 <% } %>
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="<%= __('hidesidebar') %>"></a></div>
+<div class="closeaside"><a id="iCloseButton" class="closebutton" href="#" title="<%= __('hidesidebar') %>"></a></div>
 <aside class="clearfix">
 <% theme.widgets.forEach(function(widget){ %>
   <%- partial('../_widget/' + widget) %>
